@@ -6,6 +6,11 @@ This project simulates a real-world supply chain analytics scenario inspired by 
 
 ---
 
+## 🔗 Important Link
+
+- 🐍 **[Python Cleaning & EDA Script](https://drive.google.com/file/d/1yB2ByKnwcEEvaq810KRq2mUVhh7xv8Hz/view?usp=sharing)**  
+  End-to-end Python script for data cleaning, transformation, delay calculation, and CSV export—showcasing Pandas, NumPy, and real-world data wrangling.
+
 ## 🚀 Project Objectives
 
 - Clean and analyze Unilever-style supply chain data

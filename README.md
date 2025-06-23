@@ -110,16 +110,18 @@ Insight:
 
 Boosting Supplier 4’s volume by 10% reduces total defect cost by 12.5%.
 A 20% cost hike in Air transport suggests shifting 25% to road to save 8–10%.
-
+```
 
 ####🧠 Key Business Insights
-- Theme	Insight
-- SKU Risk	2 top-selling SKUs are dangerously understocked → immediate inventory action
-- Supplier Cost	Supplier 2 underperforms in quality → needs audit; Supplier 1 is underutilized
-- Logistics	Carrier C is costly and slow → shift 30% to Carrier A/B to optimize
-- Strategy	Simulation shows strong impact by adjusting volume, transport, and pricing
+
+- Theme Insight
+- SKU Risk 2 top-selling SKUs are dangerously understocked → immediate inventory action
+- Supplier Cost Supplier 2 underperforms in quality → needs audit; Supplier 1 is underutilized
+- Logistics Carrier C is costly and slow → shift 30% to Carrier A/B to optimize
+- Strategy Simulation shows strong impact by adjusting volume, transport, and pricing
 
 ####📘 Learning Outcomes
+
 - erformed real-world ETL process in Python
 
 - Wrote decision-oriented SQL for targeted insight
@@ -128,7 +130,6 @@ A 20% cost hike in Air transport suggests shifting 25% to road to save 8–10%.
 
 - Extracted business impact from operational KPIs
 
-
 ####📌 Credit
 Inspired by Unilever Bangladesh's BizLearner Program (2025) — simulated case.
 
@@ -136,5 +137,7 @@ Inspired by Unilever Bangladesh's BizLearner Program (2025) — simulated case.
 Md Shahar Shitol
 Learning & Development Secretary, JUCC
 Data Analytics, Python, SQL, BI Enthusiast
+
+```
 
 ```

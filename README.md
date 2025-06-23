@@ -16,6 +16,102 @@ This project simulates a real-world supply chain analytics scenario inspired by 
 
 ---
 
+````markdown
+# 📦 Unilever Supply Chain Analytics — BizLearner Project
+
+> A full-cycle data analytics simulation using Python, SQL, and Power BI  
+> Created for Unilever Bangladesh Ltd.'s **BizLearner 2025** program  
+> Focus: Supply Chain Efficiency, SKU Strategy, Supplier Performance, and Logistics Optimization
+
+---
+
+## 🔧 1. Python: Data Cleaning & Preparation
+
+### ✅ Steps Performed
+
+- Loaded raw `.xlsx` dataset using `pandas`
+- Renamed inconsistent column names (e.g., spaces, capitalization)
+- Converted key columns to appropriate data types (`category`, `int`, `float`)
+- Checked for missing values, verified completeness
+- Exported cleaned dataset as `cleaned_supply_chain_data.csv`
+
+### 🧪 Code Snippet
+
+```python
+df = pd.read_excel("Supply Chain Analytics Uniliver.xlsx")
+df.columns = df.columns.str.strip().str.lower().str.replace(" ", "_")
+df['product_type'] = df['product_type'].astype('category')
+df['customer_demographics'] = df['customer_demographics'].astype('category')
+df['inspection_results'] = df['inspection_results'].astype('category')
+df.to_csv("cleaned_supply_chain_data.csv", index=False)
+```
+````
+
+---
+
+## 🗂 2. SQL: Targeted Query Operations
+
+### ✅ Tools Used
+
+- DuckDB (in Colab) for in-memory SQL execution on cleaned `.csv`
+
+### 🔍 Queries Performed
+
+- Top revenue-generating SKUs
+- SKUs with low availability but high revenue (stockout risk)
+- Average defect rate by supplier
+- Logistics cost breakdown by transport mode
+
+### 🧪 Sample Query
+
+```sql
+SELECT
+  sku,
+  revenue_generated,
+  availability
+FROM cleaned_supply_chain_data
+WHERE availability < 30 AND revenue_generated > 6000
+ORDER BY revenue_generated DESC;
+```
+
+---
+
+## 📊 3. Power BI: Business Dashboard & Simulation
+
+Built a **5-page storytelling dashboard** using Power BI Desktop:
+
+### 🧩 Dashboard Pages
+
+1. **Overview Dashboard**
+
+   - KPI Cards: Revenue, SKU Count, Avg Defect Rate, Avg Shipping Cost
+   - Donut Chart: Product Type Distribution
+
+2. **SKU Performance Deep Dive**
+
+   - Bar Chart: Revenue vs. Number Sold per SKU
+   - Scatter: Price vs. Volume (find outliers)
+   - Table: Risk Zone SKUs (low stock, high revenue)
+
+3. **Supplier Intelligence**
+
+   - Avg Defect Rate & Cost per Supplier
+   - Heatmap Table: Supplier vs. Lead Time vs. Defect
+
+4. **Shipping & Logistics**
+
+   - Avg Shipping Time & Cost by Carrier
+   - Pie: Transportation Mode Share
+   - Scatter: Shipping Time vs Cost Efficiency
+
+5. **What-If Simulation**
+
+   - Supplier 4 Volume Boost
+   - Air Transport Cost Increase
+   - SKU Price Change Effect on Revenue
+
+---
+
 ## 🔧 Tools & Technologies Used
 
 | Tool         | Purpose                                   |
@@ -137,7 +233,3 @@ Inspired by Unilever Bangladesh's BizLearner Program (2025) — simulated case.
 Md Shahar Shitol
 Learning & Development Secretary, JUCC
 Data Analytics, Python, SQL, BI Enthusiast
-
-```
-
-```
